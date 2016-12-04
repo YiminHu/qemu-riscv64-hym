@@ -53,7 +53,7 @@ qemu-make:
 
 linux-new:
 	@echo "Getting linux 4.6.2 src ..."
-	@cd $(DIR_WORKING);tar -xvf $(LINUX_TARBALL)
+	@cd $(DIR_WORKING);tar -xf $(LINUX_TARBALL)
 	@rm -rf $(DIR_WORKING)/riscv-linux
 	@cd $(DIR_WORKING);git clone $(RISCV_LINUX_GIT)
 	@cd $(DIR_WORKING)/riscv-linux;git checkout priv-1.9
