@@ -21,7 +21,7 @@ highfive:
 	@make bbl-make
 
 set-path:
-	@export RISCV=$(DIR_RISCV64)/riscv
+	@export RISCV=/home/RV64B/LL1300011764/riscv
 	@export PATH=$PATH:$RISCV/bin
 clean:
 	@rm -rf $(DIR_WORKING)
