@@ -2,7 +2,7 @@ DIR_RISCV64	:=$(wildcard ~/qemu-riscv64-hym)
 DIR_WORKING 	:=$(DIR_RISCV64)/working
 QEMU_GITREPO	:=$(DIR_RISCV64)/pub/git/riscv-qemu
 BUSYBOX_TARBALL :=$(DIR_RISCV64)/pub/src/busybox-1.25.1.tar.bz2
-LINUX_TARBALL	:=$(DIR_RISCV64)/pub/src/linux-4.6.2.tar.gz
+LINUX_TARBALL	:=$(DIR_RISCV64)/pub/src/linux-4.6.2.tar.xz
 RISCV_LINUX_GIT	:=$(DIR_RISCV64)/pub/git/riscv-linux.git
 RISCV_PK_GIT	:=$(DIR_RISCV64)/pub/git/riscv-pk.git
 RISCV_TOOL_GIT	:=$(DIR_RISCV64)/pub/git/riscv-gnu-toolchain.git
@@ -53,7 +53,7 @@ qemu-make:
 
 linux-new:
 	@echo "Getting linux 4.6.2 src ..."
-	@cd $(DIR_WORKING);tar -xzf $(LINUX_TARBALL)
+	@cd $(DIR_WORKING);tar -xvf $(LINUX_TARBALL)
 	@rm -rf $(DIR_WORKING)/riscv-linux
 	@cd $(DIR_WORKING);git clone $(RISCV_LINUX_GIT)
 	@cd $(DIR_WORKING)/riscv-linux;git checkout priv-1.9
