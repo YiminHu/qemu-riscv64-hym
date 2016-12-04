@@ -45,9 +45,10 @@ make toolchain
 To make everything ready, first set $PATH & $RISCV, to use default
 value you can use:
 
-make set-path
+export RISCV=/home/RV64B/LL1300011764/riscv/
+export PATH=$PATH:$RISCV/bin
 
-or you can modify the Makefile to set your own path.
+or you can modify the directory to set your own path.
 simply type:
 
 make
