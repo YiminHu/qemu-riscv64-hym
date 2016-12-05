@@ -3,9 +3,9 @@ Using qemu to run a riscv-linux with helloworld and strace
 ###############################################################
 
 0.Get neccessary git repo
-    To begin with, you should clone everything into ./pub/git, 
-    suppose you are on the course server and now in the 
-    repo qemu-riscv64-hym: 
+  To begin with, you should clone everything into ./pub/git, 
+  suppose you are on the course server and now in the  
+  repo qemu-riscv64-hym: 
 
 cd pub
 mkdir git
