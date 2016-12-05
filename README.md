@@ -63,8 +63,10 @@ Then you can start the building process, simply type:
 ```  
 make  
 ```
-Hopefully,everything will be ready.
-
+Hopefully,everything will be ready. If you want to see more detail, 
+just see Makefile. make here is actually doing make highfive, which
+make things in this sequence: busybox,strace,qemu,linux img with initramfs
+and finally bbl taken img as its payload.
 ###############################################################
 ###3.Run riscv-linux on qemu
 
@@ -75,4 +77,5 @@ cd working
 ```  
 Now you get a riscv-linux with hello and strace in /bin.And you can
 try to strace the hello program.
-###############################################################
+###############################################################  
+Note: default install directory: qemu in working/qemu-riscv64, toolchain in working/riscv
