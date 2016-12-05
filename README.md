@@ -26,7 +26,11 @@ git clone --bare https://github.com/strace/strace.git  
 ```
 But in this cause, riscv-qemu.git need to update a submodule pixman,
 so if you are not on the course server, you need to add:`@cd $(DIR_WORKING);git submodule update --init pixman` 
-to the last line of qemu-new target in Makefile
+to the last line of qemu-new target in Makefile.  
+To install prequiste:  
+```  
+sudo apt-get install gcc libc6-dev pkg-config bridge-utils uml-utilities zlib1g-dev libglib2.0-dev autoconf automake libtool libsdl1.2-dev  
+```
 ###############################################################
 
 ###1.Decide whether to make toolchain
@@ -54,7 +58,7 @@ value you can use:
 export RISCV=/home/RV64B/LL1300011764/riscv/  
 export PATH=$PATH:$RISCV/bin  
 ```
-or you can modify the environment variable to set your own path.  
+or you can modify the environment variable to set your own path.
 Then you can start the building process, simply type: 
 ```  
 make  
