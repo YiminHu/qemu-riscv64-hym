@@ -54,8 +54,8 @@ value you can use:
 export RISCV=/home/RV64B/LL1300011764/riscv/  
 export PATH=$PATH:$RISCV/bin  
 ```
-or you can modify the directory to set your own path.
-simply type: 
+or you can modify the environment variable to set your own path.  
+Then you can start the building process, simply type: 
 ```  
 make  
 ```
